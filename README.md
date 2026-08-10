@@ -16,7 +16,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/brainglobe-atlasapi-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/brainglobe-atlasapi-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -38,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `brainglobe-atlasapi` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install brainglobe-atlasapi
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install brainglobe-atlasapi
 ```
 
-It is possible to list all of the versions of `brainglobe-atlasapi` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add brainglobe-atlasapi
+# for installing globally
+pixi global install brainglobe-atlasapi
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `brainglobe-atlasapi` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search brainglobe-atlasapi --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search brainglobe-atlasapi --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search brainglobe-atlasapi --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -74,6 +118,8 @@ mamba repoquery whoneeds brainglobe-atlasapi --channel conda-forge
 # List dependencies of `brainglobe-atlasapi`:
 mamba repoquery depends brainglobe-atlasapi --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
